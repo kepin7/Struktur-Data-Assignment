@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Array</h1>
 
 <p align="center">Hizkia Kevin Octaviano - 2311102185</p>
 
@@ -47,7 +47,60 @@ Tipe data koleksi memungkinkan pengelolaan dan akses data yang lebih terstruktur
 
 ## [Guided](#guided)
 
-### 1. Tipe Data Primitif
+### 1. Program Input Array Tiga Dimensi
+
+```C++
+#include <iostream>
+using namespace std;
+// PROGRAM INPUT ARRAY 3 DIMENSI
+int main()
+{
+    // Deklarasi array
+    int arr[2][3][3];
+    // Input elemen
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+        cout << endl;
+    }
+    // Output Array
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
+            }
+        }
+    }
+    cout << endl;
+    // Tampilan array
+    for (int x = 0; x < 2; x++)
+    {
+        for (int y = 0; y < 3; y++)
+        {
+            for (int z = 0; z < 3; z++)
+            {
+                cout << arr[x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+}
+```
+
+Kode diatas adalah program untuk melakukan operasi matematika dasar (penambahan, pengurangan, perkalian, dan pembagian) antara dua bilangan. Setelah pengguna memasukkan operator yang diinginkan (+, -, *, /), program kemudian meminta pengguna untuk memasukkan dua bilangan yang akan dioperasikan. Setelah menerima input, program menggunakan pernyataan switch-case untuk memeriksa operator yang dimasukkan oleh pengguna. Jika operator sesuai dengan salah satu kasus (+, -, *, /), maka program akan melakukan operasi yang sesuai sesuai dengan operator tersebut dan menampilkan hasilnya. Namun, jika operator yang dimasukkan tidak valid, program akan menampilkan pesan kesalahan.
+
+### 2. Program Mencari Nilai Maksimal pada Array
 
 ```C++
 #include <iostream>
@@ -56,213 +109,114 @@ using namespace std;
 
 int main()
 {
-    char op;
-    float num1, num2;
-    // it allows user to enter operator i,e, +, -, *, /
-    cin >> op;
-    // it allows user to enter the operands
-    cin >> num1 >> num2;
-    // switch statement begins
-    switch (op)
+    // Deklarasi variabel
+    int maks, a, i = 1, lokasi;
+
+    // Input panjang array
+    cout << "Masukkan panjang array : ";
+    cin >> a;
+
+    // Deklarasi array dengan panjang `a`
+    int array[a];
+
+    // Input nilai elemen array
+    cout << "Masukkan " << a << " angka\n";
+    for (i = 0; i < a; i++)
     {
-    // if user center +
-    case '+':
-        cout << num1 + num2;
-        break;
-    // if user center -
-    case '-':
-        cout << num1 - num2;
-        break;
-    // if user center *
-    case '*':
-        cout << num1 * num2;
-        break;
-    // if user center /
-    case '/':
-        cout << num1 / num2;
-        break;
-    // if the operator is other than +,-,* or /,
-    // error message will be display
-    default:
-        cout << "Error! operator is not correct";
-    } // switch statement ends
-    return 0;
+        cout << "Array ke-" << (i) << ": ";
+        cin >> array[i];
+    }
+
+    // Inisialisasi variabel `maks` dengan nilai elemen array pertama
+    maks = array[0];
+
+    // Perulangan untuk mencari nilai maksimum
+    for (i = 0; i < a; i++)
+    {
+        // Jika nilai elemen array lebih besar dari `maks`
+        if (array[i] > maks)
+        {
+            // Update nilai `maks` dengan nilai elemen array
+            maks = array[i];
+            // Simpan lokasi elemen array dengan nilai maksimum
+            lokasi = i;
+        }
+    }
+
+    // Output nilai maksimum dan lokasinya
+    cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi << endl;
 }
-```
 
-Kode diatas adalah program untuk melakukan operasi matematika dasar (penambahan, pengurangan, perkalian, dan pembagian) antara dua bilangan. Setelah pengguna memasukkan operator yang diinginkan (+, -, *, /), program kemudian meminta pengguna untuk memasukkan dua bilangan yang akan dioperasikan. Setelah menerima input, program menggunakan pernyataan switch-case untuk memeriksa operator yang dimasukkan oleh pengguna. Jika operator sesuai dengan salah satu kasus (+, -, *, /), maka program akan melakukan operasi yang sesuai sesuai dengan operator tersebut dan menampilkan hasilnya. Namun, jika operator yang dimasukkan tidak valid, program akan menampilkan pesan kesalahan.
-
-### 2. Tipe Data Abstrak
-
-```C++
-#include <stdio.h>
-
-// struct
-struct Mahasiswa
-{
-    const char *name;
-    const char *address;
-    int age;
-};
-
-int main()
-{
-    // menggunakan struct
-    struct Mahasiswa mhs1, mhs2;
-    // mengisi nilai ke struct
-    mhs1.name = "Dian";
-    mhs1.address = "Mataram";
-    mhs1.age = 22;
-    mhs2.name = "Bambang";
-    mhs2.address = "Surabaya";
-    mhs2.age = 23;
-
-    // mencetak isi struct
-    printf("## Mahasiswa 1 ##\n");
-    printf("Name : %s\n", mhs1.name);
-    printf("Address : %s\n", mhs1.address);
-    printf("Age : %d\n", mhs1.age);
-    printf("## Mahasiswa 2 ##\n");
-    printf("Name : %s\n", mhs2.name);
-    printf("Address : %s\n", mhs2.address);
-    printf("Age : %d\n", mhs2.age);
-    return 0;
-}
 ```
 
 Kode di atas adalah merupakan program yang menggunakan struktur data atau struct untuk merepresentasikan informasi mahasiswa. Dalam struct `Mahasiswa`, terdapat tiga anggota yaitu `name` (nama), `address` (alamat), dan `age` (umur). Program kemudian membuat dua variabel bertipe struct Mahasiswa, yaitu `mhs1` dan `mhs2`, dan mengisi nilai untuk masing-masing variabel.
 
 Selanjutnya, program mencetak informasi mahasiswa ke layar menggunakan fungsi `printf`, termasuk nama, alamat, dan umur untuk kedua mahasiswa. Hasilnya adalah mencetak informasi mahasiswa 1 (`mhs1`) dan mahasiswa 2 (`mhs2`) ke layar sesuai dengan nilai yang telah diisikan sebelumnya.
 
-### 3. Tipe Data Koleksi
-
-```C++
-#include <iostream>
-using namespace std;
-int main()
-{
-    //deklarasi dan inisialisasi array
-    int nilai[5];
-    nilai[0] = 23;
-    nilai[1] = 50;
-    nilai[2] = 34;
-    nilai[3] = 78;
-    nilai[4] = 90;
-
-    //mencetak array
-    cout << "Isi array pertama :" << nilai[0] << endl;
-    cout << "Isi array kedua :" << nilai[1] << endl;
-    cout << "Isi array ketiga :" << nilai[2] << endl;
-    cout << "Isi array keempat :" << nilai[3] << endl;
-    cout << "Isi array kelima :" << nilai[4] << endl;
-    return 0;
-}
-```
-
-kode tersebut dimulai dengan deklarasi array `nilai` dengan ukuran 5 elemen bertipe integer. Kemudian, setiap elemen dari array tersebut diinisialisasi dengan nilai-nilai tertentu: `nilai[0]` diinisialisasi dengan nilai 23, `nilai[1]` diinisialisasi dengan nilai 50, `nilai[2]` diinisialisasi dengan nilai 34, `nilai[3]` diinisialisasi dengan nilai 78, dan `nilai[4]` diinisialisasi dengan nilai 90. Selanjutnya, program mencetak nilai dari setiap elemen array menggunakan pernyataan `cout`, masing-masing diikuti dengan nomor indeksnya dan nilai yang disimpan di dalamnya. Setelah mencetak nilai dari semua elemen array, program mengakhiri eksekusi dan mengembalikan nilai 0, menandakan bahwa program telah dijalankan dengan sukses. Ini adalah alur kerja program yang sederhana namun efektif untuk menampilkan isi dari sebuah array dengan menggunakan perulangan.
-
 ## Unguided
 
-### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/340d2fb4-1930-4510-b102-a1a127500aa4)
 
 ```C++
 #include <iostream>
 using namespace std;
 
-// Fungsi untuk mengkonversi suhu dari Celsius ke Fahrenheit
-float celsius_to_fahrenheit(float celsius){
-    return (celsius * 9 / 5) + 32;
-}
-// Fungsi untuk mengkonversi suhu dari Celsius ke Reamur
-float celsius_to_reamur(float celsius){
-    return celsius * 4 / 5;
-}
+int main()
+{
+    // Deklarasi variabel
+    int n;
+    // Meminta pengguna untuk memasukkan jumlah elemen array
+    cout << "Masukkan jumlah elemen array: ";
+    cin >> n;
+    // Deklarasi array dengan ukuran n
+    int arr[n];
 
-// Fungsi untuk mengkonversi suhu dari Celsius ke Kelvin
-float celsius_to_kelvin(float celsius){
-    return celsius + 273.15;
-}
+    // Input elemen array
+    cout << "Masukkan " << n << " elemen array:\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Array ke - " << i + 1 << ": ";
+        cin >> arr[i];
+    }
+    cout << endl;
 
-// Fungsi untuk mengkonversi suhu dari Fahrenheit ke Celsius
-float fahrenheit_to_celsius(float fahrenheit){
-    return (fahrenheit - 32) * 5 / 9;
-}
+    // Output data array
+    cout << "Data Array : ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 
-// Fungsi untuk mengkonversi suhu dari Reamur ke Celsius
-float reamur_to_celsius(float reamur){
-    return reamur * 5 / 4;
-}
-
-// Fungsi untuk mengkonversi suhu dari Kelvin ke Celsius
-float kelvin_to_celsius(float kelvin){
-    return kelvin - 273.15;
-}
-
-int main(){
-
-    // Deklarasi variabel yang digunakan untuk memproses menu pilihan user
-    int pilih;
-    // Deklarasi variabel yang digunakan untuk menampung data input dari user
-    float temperature;
-
-    // Menampilkan menu pilihan konversi
-    cout << "Program Konversi Suhu" << endl;
-    cout << "======================" << endl;
-    cout << "Pilih jenis konversi:" << endl;
-    cout << "1. Celsius ke Fahrenheit" << endl;
-    cout << "2. Celsius ke Reamur" << endl;
-    cout << "3. Celsius ke Kelvin" << endl;
-    cout << "4. Fahrenheit ke Celsius" << endl;
-    cout << "5. Reamur ke Celsius" << endl;
-    cout << "6. Kelvin ke Celsius" << endl;
-
-    // Meminta pengguna memasukkan pilihan
-    cout << "Masukkan pilihan Anda (1-6) : ";
-    cin >> pilih;
-
-    // Melakukan konversi berdasarkan pilihan pengguna
-    switch (pilih){
-        case 1: // Konversi dari Celsius ke Fahrenheit
-            cout << "Masukkan suhu dalam Celsius: ";
-            cin >> temperature;
-            cout << "Suhu dalam Fahrenheit: " << celsius_to_fahrenheit(temperature) << endl;
-            break;
-        case 2: // Konversi dari Celsius ke Reamur
-            cout << "Masukkan suhu dalam Celsius: ";
-            cin >> temperature;
-            cout << "Suhu dalam Reamur: " << celsius_to_reamur(temperature) << endl;
-            break;
-        case 3: // Konversi dari Celsius ke Kelvin
-            cout << "Masukkan suhu dalam Celsius: ";
-            cin >> temperature;
-            cout << "Suhu dalam Kelvin: " << celsius_to_kelvin(temperature) << endl;
-            break;
-        case 4: // Konversi dari Fahrenheit ke Celsius
-            cout << "Masukkan suhu dalam Fahrenheit: ";
-            cin >> temperature;
-            cout << "Suhu dalam Celsius: " << fahrenheit_to_celsius(temperature) << endl;
-            break;
-        case 5: // Konversi dari Reamur ke Celsius
-            cout << "Masukkan suhu dalam Reamur: ";
-            cin >> temperature;
-            cout << "Suhu dalam Celsius: " << reamur_to_celsius(temperature) << endl;
-            break;
-        case 6: // Konversi dari Kelvin ke Celsius
-            cout << "Masukkan suhu dalam Kelvin: ";
-            cin >> temperature;
-            cout << "Suhu dalam Celsius: " << kelvin_to_celsius(temperature) << endl;
-            break;
-        default: // Menangani pilihan yang tidak valid
-            cout << "Pilihan tidak valid." << endl;
+    // Menampilkan nomor genap
+    cout << "Nomor genap : ";
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            cout << arr[i] << ", ";
         }
-    return 0;
+    }
+    cout << endl;
+
+    // Menampilkan nomor ganjil
+    cout << "Nomor ganjil : ";
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] % 2 != 0)
+        {
+            cout << arr[i] << ", ";
+        }
+    }
 }
+
 
 ```
 
 #### Output:
 
-![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/9a67894a-ba3b-40c1-8baa-fc1c1a505737)
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/b96d4f94-00a9-4141-93c5-11cf123a1279)
 
 Program dimulai dengan menampilkan menu pilihan konversi suhu kepada pengguna. Setiap pilihan disertai dengan nomor yang berkaitan dan jenis konversi yang dilakukan, seperti dari Celsius ke Fahrenheit, Celsius ke Reamur, dan sebagainya. Setelah menampilkan menu, pengguna diminta untuk memilih opsi dengan memasukkan angka yang sesuai. Setelah memasukkan pilihan, program menggunakan pernyataan switch-case untuk menentukan tindakan yang akan diambil berdasarkan pilihan pengguna.
 
@@ -272,7 +226,7 @@ Misalnya, jika pengguna memilih opsi 3 (Konversi dari Celsius ke Kelvin), progra
 
 Kesimpulan dari materi di atas adalah bahwa tipe data primitif adalah fondasi penting dalam pemrograman. Memahami jenis-jenis dan penggunaannya dengan baik akan membantu dalam penulisan kode yang lebih efisien dan mudah dipahami. Contoh tipe data primitif meliputi int untuk menyimpan bilangan bulat, float untuk bilangan desimal, char untuk huruf atau simbol, dan boolean untuk menyimpan nilai boolean dengan dua kemungkinan nilai, yaitu true atau false.
 
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
+### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
 #### Class 
 
@@ -286,75 +240,75 @@ Fungsi struct yaitu dapat menggabungkan sekumpulan variabel dan memberi nama pad
 
 Perbedaan utama antara class dan struct adalah pada hak akses defaultnya. Dalam class, anggota bersifat private secara default, sementara dalam struct bersifat public secara default. Dengan class, kita dapat menggunakan hak akses private untuk menyembunyikan implementasi internal dari pengguna class, sementara struct lebih terbuka dan digunakan terutama untuk menyimpan data tanpa perilaku yang kompleks.
 
-#### Contoh Program
-
 ```C++
 #include <iostream>
-#include <string>
 using namespace std;
-
-// Struktur data untuk menampung informasi pegawai
-struct Pegawai
-{
-    string nama;
-    int umur;
-    string email;
-};
-
-// Class biasa yang belum publik akses (default private)
-class Pegawai1
-{
-    string nama;
-    int umur;
-    string email;
-};
-
-// Class yang sudah menjadi publik akses
-class Pegawai2
-{
-public:
-    string nama;
-    int umur;
-    string email;
-};
 
 int main()
 {
+    // Deklarasi variabel untuk menyimpan jumlah baris, kolom, dan kedalaman
+    int x, y, z;
+    // Meminta pengguna untuk memasukkan jumlah baris, kolom, dan kedalaman
+    cout << "Masukkan jumlah baris: ";
+    cin >> x;
+    cout << "Masukkan jumlah kolom: ";
+    cin >> y;
+    cout << "Masukkan jumlah kedalaman: ";
+    cin >> z;
 
-    // Deklarasi variabel bertipe `Pegawai` dengan nama `pgw1`
-    Pegawai pgw1;
-    // Deklarasi variabel bertipe `Pegawai2` dengan nama `pgw2`
-    Pegawai2 pgw2;
+    cout << endl;
+    // Deklarasi array tiga dimensi dengan ukuran sesuai input pengguna
+    int arr[x][y][z];
 
-    // Mengisi nilai field pada variabel `pgw1`
-    pgw1.nama = "kepin";
-    pgw1.umur = 20;
-    pgw1.email = "kepin8@gmail.com";
+    // Perulangan untuk input elemen array
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < y; j++)
+        {
+            for (int k = 0; k < z; k++)
+            {
+                // Meminta pengguna untuk memasukkan nilai untuk setiap elemen array
+                cout << "Input Array[" << i << "][" << j << "][" << k << "] = ";
+                cin >> arr[i][j][k];
+            }
+        }
+        cout << endl;
+    }
 
-    // Menampilkan informasi pegawai `pgw1`
-    cout << "===== Pegawai 1 ====="
-         << "\nNama : " << pgw1.nama
-         << "\nUmur : " << pgw1.umur << " tahun"
-         << "\nEmail : " << pgw1.email << endl;
+    // Perulangan untuk output Array
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < y; j++)
+        {
+            for (int k = 0; k < z; k++)
+            {
+                // Cetak elemen data array
+                cout << "Data Array[" << i << "][" << j << "][" << k << "] = " << arr[i][j][k] << endl;
+            }
+        }
+    }
+    cout << endl;
 
-    // Mengisi nilai field pada variabel `pgw2`
-    pgw2.nama = "sugeng";
-    pgw2.umur = 50;
-    pgw2.email = "sugeng98@gmail.com";
-
-    // Menampilkan informasi pegawai `pgw2`
-    cout << "===== Pegawai 2 ====="
-         << "\nNama : " << pgw2.nama
-         << "\nUmur : " << pgw2.umur << " tahun"
-         << "\nEmail : " << pgw2.email << endl;
-
-    return 0;
+    // Perulangan untuk tampilan array
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < y; j++)
+        {
+            for (int k = 0; k < z; k++)
+            {
+                // Cetak elemen array
+                cout << arr[i][j][k] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
 }
 ```
 
 #### Output:
 
-![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/1c1cd967-5d63-401e-830a-dd9249097315)
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/39be2157-67d7-4954-94ab-ee1f8061dd3a)
 
 #### Struct Pegawai:
 
@@ -380,47 +334,99 @@ Struktur data ini memiliki tiga field :
 
 Program tersebut menunjukkan perbedaan dalam penggunaan class dan struct, terutama terkait dengan hak akses default anggota (private pada class, public pada struct). Objek `pgw1` menggunakan struct, sementara `pgw2` menggunakan class dengan hak akses public.
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
 ```C++
 #include <iostream>
-#include <map>
-#include <string>
 
 using namespace std;
 
-int main(){
+int main()
+{
+    // Deklarasi variabel
+    int op, maks, min, a, i = 1, lokasi_maks, lokasi_min, total = 0;
 
-    string kalimat;
-    
-    // Meminta pengguna untuk memasukkan sebuah kalimat
-    cout << "Masukkan sebuah kalimat: ";
-    getline(cin, kalimat);
+    // Input panjang array
+    cout << "Masukkan panjang array: ";
+    cin >> a;
 
-    // Membuat map untuk menyimpan jumlah kemunculan setiap karakter
-    map<char, int> hitungKarakter;
+    // Deklarasi array dengan panjang `a`
+    int array[a];
 
-    // Menghitung kemunculan setiap karakter dalam kalimat
-    for (char i : kalimat){
-        // Mengabaikan spasi
-        if (i != ' '){
-            // Menambahkan karakter ke dalam map atau meningkatkan jumlah kemunculannya
-            ++hitungKarakter[i];
+    // Input nilai elemen array
+    cout << "Masukkan " << a << " angka\n";
+    for (i = 0; i < a; i++)
+    {
+        cout << "Array ke-" << (i + 1) << ": ";
+        cin >> array[i];
+        total += array[i];
+    }
+
+    // Inisialisasi variabel `maks` dan `min` dengan nilai elemen array pertama
+    maks = min = array[0];
+    lokasi_maks = lokasi_min = 0;
+
+    // perulangan untuk mencari nilai maksimum dan minimum
+    for (i = 0; i < a; i++)
+    {
+        if (array[i] > maks)
+        {
+            maks = array[i];
+            lokasi_maks = i;
+        }
+        else if (array[i] < min)
+        {
+            min = array[i];
+            lokasi_min = i;
         }
     }
 
-    // Menampilkan hasil hitungan
-    cout << "\nJumlah kemunculan karakter :\n";
-    for (const auto& pair : hitungKarakter){
-        cout << "'" << pair.first << "': " << pair.second << " kali" << endl;
-    }
+    // menghitung nilai rata-rata
+    float rata_rata = (float)total / a;
+
+    // Menampilkan menu
+    do
+    {
+        cout << "\n===== Menu =====\n";
+        cout << "1. Mencari Nilai Maksimum\n";
+        cout << "2. Mencari Nilai Minimum\n";
+        cout << "3. Mencari Nilai Rata-rata\n";
+        cout << "4. Keluar\n";
+        cout << "Masukkan pilihan : ";
+        cin >> op;
+
+        switch (op)
+        {
+        case 1:
+            // Output nilai maksimum dan lokasinya
+            cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << (lokasi_maks + 1) << endl;
+            break;
+        case 2:
+            // Output nilai minimum dan lokasinya
+            cout << "Nilai minimum adalah " << min << " berada di Array ke " << (lokasi_min + 1) << endl;
+            break;
+        case 3:
+            // Output nilai rata-rata
+            cout << "Nilai rata-rata adalah " << rata_rata << endl;
+            break;
+        case 4:
+            // Keluar dari program
+            cout << "Thank you!, Code By Kevin" << endl;
+            break;
+        default:
+            // pilihan tidak valid
+            cout << "Pilihan tidak valid!" << endl;
+        }
+    } while (op != 4);
+
     return 0;
 }
+
 ```
 
 #### Output:
 
-![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/67e37e29-177e-4e07-856c-d25e844114e2)
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/6a54b5e6-d138-4648-81ee-33962b02ff8f)
 
 program tersebut untuk menghitung jumlah kemunculan setiap karakter dalam sebuah kalimat yang dimasukkan oleh pengguna. Setelah pengguna memasukkan sebuah kalimat, program akan melakukan iterasi melalui setiap karakter dalam kalimat tersebut dan mengabaikan spasi. Kemudian, menggunakan struktur data map dari C++, program menyimpan jumlah kemunculan setiap karakter dalam sebuah map, di mana karakter adalah kunci dan jumlah kemunculannya adalah nilai. Setelah selesai menghitung, program akan menampilkan hasil hitungan tersebut dengan mencetak setiap karakter beserta jumlah kemunculannya ke layar.
 
