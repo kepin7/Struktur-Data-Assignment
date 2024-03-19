@@ -12,9 +12,18 @@
 
 ## Dasar Teori
 
-Tipe data merupakan klasifikasi jenis-jenis data yang berfungsi untuk menentukan data serta variabel yang dapat digunakan dalam suatu sistem dan operasi-operasi tertentu. Tipe data adalah semua himpunan yang ada pada semua data tanpa terkecuali[1]. Adanya klasifikasi data juga dapat membantu operasi komputer mengenali nilai data beserta instruksinya. Tipe data dibagi menjadi 3, antara lain :
-
-### 1. Tipe Data Primitif:
+Array (larik) ialah penampung sejumlah data sejenis
+(homogen) yang menggunakan satu identifier (pengenal).
+Masing-masing elemen larik diakses menggunakan indeks
+(subscript) dari nol sampai n-1 (n menyatakan jumlah elemen
+larik).
+Pengolahan data larik harus per elemen. Elemen larik
+dapat diakses langsung (acak). Tujuannya adalah untuk
+memanipulasi elemen keempat tidak harus melalui elemen
+pertama, kedua, dan ketiga. Berdasarkan banyaknya indeks,
+larik dibagi menjadi larik satu dimensi dan multidimensi (dua
+dimensi dan tiga dimensi).
+### 1. Array Satu Dimensi:
 
 Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai dan telah ditentukan oleh sistem. Bahasa pemrograman biasanya menyediakan tipe data sebagai bagian dari bahasa diri[2]. Tipe data ini, yang dikenal sebagai primitif. Berikut beberapa macam tipe data primitif :
 
@@ -440,12 +449,8 @@ Singkatnya, array cocok untuk situasi dengan data yang memiliki ukuran tetap dan
 pemahaman tentang tipe data primitif, abstraksi kolektif, fungsi, struct, dan class adalah krusial. Tipe data primitif menyediakan dasar untuk menyimpan nilai tunggal, sementara abstraksi kolektif memungkinkan pengelompokkan data menjadi struktur yang lebih besar dan terorganisir. Fungsi, struct, dan class membantu dalam mengorganisir kode menjadi unit-unit yang dapat digunakan kembali dan memfasilitasi pemrograman berorientasi objek. Perbedaan antara array dan map juga penting untuk dipahami; array digunakan untuk koleksi elemen dengan tipe data yang sama, diakses melalui indeks numerik, sementara map menyimpan pasangan kunci-nilai yang memungkinkan akses cepat ke nilai berdasarkan kuncinya. Memahami konsep ini membantu pengembang dalam merancang dan mengimplementasikan solusi yang efisien, terstruktur, dan mudah dimengerti.
 ## Referensi
 
-[1] Litalia. (2023, September 30). _Pengertian Tipe Data Beserta Fungsi dan Jenis-Jenis Tipe Data_ [online]. Available: https://www.jurnalponsel.com/pengertian-tipe-data/.
+[1] Mulyana, A., et al., Cara Mudah Mempelajari Algoritma dan Struktur Data. Edisi Pertama. Yogyakarta : DIVA Press, 2021
 
-[2] Zein, A. dan Eriana, E.S., Algoritma dan Struktur Data. Edisi Pertama. Tangerang Selatan : Unpam Press, 2022.
-
-[3] Paul J. Deitel and Harvey M. Deitel, C++20 Programming - Fundamentals to Advanced Features, 1st ed. Boston, MA, USA: Pearson, 2020.
-
-[4] Tecom. (2010, Mei 24). _Struct dan Class pada C++_ [online]. Available: https://ainkhina.blogspot.com/2010/05/struct-pada-c.html?m=1.
+[2] A. Suhendar, “Struktur data sederhana (statis array)”, 30-Mar-2019. [Online]. Available: osf.io/s2r57.
 
 [5] "cppreference", [Online]. Available: https://en.cppreference.com/w/. [Accessed: March 7, 2024].
