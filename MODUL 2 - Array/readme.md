@@ -337,13 +337,12 @@ Program tersebut menunjukkan perbedaan dalam penggunaan class dan struct, teruta
 
 ```C++
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
     // Deklarasi variabel
-    int op, maks, min, a, i = 1, lokasi_maks, lokasi_min, total = 0;
+    int a, i, maks, min, lokasi_maks, lokasi_min, total = 0, op;
 
     // Input panjang array
     cout << "Masukkan panjang array: ";
@@ -356,7 +355,7 @@ int main()
     cout << "Masukkan " << a << " angka\n";
     for (i = 0; i < a; i++)
     {
-        cout << "Array ke-" << (i + 1) << ": ";
+        cout << "Array ke-" << i << ": ";
         cin >> array[i];
         total += array[i];
     }
@@ -398,11 +397,11 @@ int main()
         {
         case 1:
             // Output nilai maksimum dan lokasinya
-            cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << (lokasi_maks + 1) << endl;
+            cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi_maks << endl;
             break;
         case 2:
             // Output nilai minimum dan lokasinya
-            cout << "Nilai minimum adalah " << min << " berada di Array ke " << (lokasi_min + 1) << endl;
+            cout << "Nilai minimum adalah " << min << " berada di Array ke " << lokasi_min << endl;
             break;
         case 3:
             // Output nilai rata-rata
@@ -420,12 +419,11 @@ int main()
 
     return 0;
 }
-
 ```
 
 #### Output:
 
-![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/6a54b5e6-d138-4648-81ee-33962b02ff8f)
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/f75af208-4731-476e-96fb-35164d4549ef)
 
 program tersebut untuk menghitung jumlah kemunculan setiap karakter dalam sebuah kalimat yang dimasukkan oleh pengguna. Setelah pengguna memasukkan sebuah kalimat, program akan melakukan iterasi melalui setiap karakter dalam kalimat tersebut dan mengabaikan spasi. Kemudian, menggunakan struktur data map dari C++, program menyimpan jumlah kemunculan setiap karakter dalam sebuah map, di mana karakter adalah kunci dan jumlah kemunculannya adalah nilai. Setelah selesai menghitung, program akan menampilkan hasil hitungan tersebut dengan mencetak setiap karakter beserta jumlah kemunculannya ke layar.
 
