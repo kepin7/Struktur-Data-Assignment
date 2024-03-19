@@ -29,7 +29,7 @@ int main()
     cout << endl;
 
     // Menampilkan nomor genap
-    cout << "Nomor genap : ";
+    cout << "Nomor Genap : ";
     for (int i = 0; i < a; i++)
     {
         if (arr[i] % 2 == 0)
@@ -40,7 +40,7 @@ int main()
     cout << endl;
 
     // Menampilkan nomor ganjil
-    cout << "Nomor ganjil : ";
+    cout << "Nomor Ganjil : ";
     for (int i = 0; i < a; i++)
     {
         if (arr[i] % 2 != 0)
