@@ -190,7 +190,7 @@ int main()
     cout << endl;
 
     // Menampilkan nomor genap
-    cout << "Nomor genap : ";
+    cout << "Nomor Genap : ";
     for (int i = 0; i < a; i++)
     {
         if (arr[i] % 2 == 0)
@@ -201,7 +201,7 @@ int main()
     cout << endl;
 
     // Menampilkan nomor ganjil
-    cout << "Nomor ganjil : ";
+    cout << "Nomor Ganjil : ";
     for (int i = 0; i < a; i++)
     {
         if (arr[i] % 2 != 0)
@@ -215,7 +215,7 @@ int main()
 
 #### Output:
 
-![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/2b0733a4-b5e4-40a2-aa88-aa57bb57d1ef)
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/bba93a44-c7f7-45be-8e62-78f60ff109b6)
 
 Program dimulai dengan menampilkan menu pilihan konversi suhu kepada pengguna. Setiap pilihan disertai dengan nomor yang berkaitan dan jenis konversi yang dilakukan, seperti dari Celsius ke Fahrenheit, Celsius ke Reamur, dan sebagainya. Setelah menampilkan menu, pengguna diminta untuk memilih opsi dengan memasukkan angka yang sesuai. Setelah memasukkan pilihan, program menggunakan pernyataan switch-case untuk menentukan tindakan yang akan diambil berdasarkan pilihan pengguna.
 
