@@ -307,7 +307,7 @@ int main()
 
 #### Output:
 
-![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/39be2157-67d7-4954-94ab-ee1f8061dd3a)
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/1910c84b-678e-4d20-976a-9391d73cb263)
 
 #### Struct Pegawai:
 
