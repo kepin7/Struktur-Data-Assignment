@@ -245,14 +245,14 @@ using namespace std;
 
 int main()
 {
-    // Deklarasi variabel untuk menyimpan jumlah baris, kolom, dan kedalaman
+    // Deklarasi variabel untuk menyimpan jumlah baris, kolom, dan lapisan
     int x, y, z;
-    // Meminta pengguna untuk memasukkan jumlah baris, kolom, dan kedalaman
-    cout << "Masukkan jumlah baris: ";
+    // Meminta pengguna untuk memasukkan jumlah baris, kolom, dan lapisan
+    cout << "Masukkan jumlah baris : ";
     cin >> x;
-    cout << "Masukkan jumlah kolom: ";
+    cout << "Masukkan jumlah kolom : ";
     cin >> y;
-    cout << "Masukkan jumlah kedalaman: ";
+    cout << "Masukkan jumlah lapisan : ";
     cin >> z;
 
     cout << endl;
