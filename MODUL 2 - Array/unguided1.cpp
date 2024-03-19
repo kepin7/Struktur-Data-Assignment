@@ -4,25 +4,25 @@ using namespace std;
 int main()
 {
     // Deklarasi variabel
-    int n;
-    // Meminta pengguna untuk memasukkan jumlah elemen array
-    cout << "Masukkan jumlah elemen array: ";
-    cin >> n;
-    // Deklarasi array dengan ukuran n
-    int arr[n];
+    int a;
+    // Meminta pengguna untuk memasukkan jumlah array
+    cout << "Masukkan jumlah array: ";
+    cin >> a;
+    // Deklarasi array dengan ukuran a
+    int arr[a];
 
-    // Input elemen array
-    cout << "Masukkan " << n << " elemen array:\n";
-    for (int i = 0; i < n; i++)
+    // Input array
+    cout << "Masukkan " << a << " angka\n";
+    for (int i = 0; i < a; i++)
     {
-        cout << "Array ke - " << i + 1 << ": ";
+        cout << "Array ke - " << i << ": ";
         cin >> arr[i];
     }
     cout << endl;
 
     // Output data array
     cout << "Data Array : ";
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < a; i++)
     {
         cout << arr[i] << " ";
     }
@@ -30,7 +30,7 @@ int main()
 
     // Menampilkan nomor genap
     cout << "Nomor genap : ";
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < a; i++)
     {
         if (arr[i] % 2 == 0)
         {
@@ -41,7 +41,7 @@ int main()
 
     // Menampilkan nomor ganjil
     cout << "Nomor ganjil : ";
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < a; i++)
     {
         if (arr[i] % 2 != 0)
         {
