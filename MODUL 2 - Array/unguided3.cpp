@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     // Deklarasi variabel
-    int op, maks, min, a, i = 1, lokasi_maks, lokasi_min, total = 0;
+    int a, i, maks, min, lokasi_maks, lokasi_min, total = 0, op;
 
     // Input panjang array
     cout << "Masukkan panjang array: ";
@@ -18,7 +18,7 @@ int main()
     cout << "Masukkan " << a << " angka\n";
     for (i = 0; i < a; i++)
     {
-        cout << "Array ke-" << (i + 1) << ": ";
+        cout << "Array ke-" << i << ": ";
         cin >> array[i];
         total += array[i];
     }
@@ -60,11 +60,11 @@ int main()
         {
         case 1:
             // Output nilai maksimum dan lokasinya
-            cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << (lokasi_maks + 1) << endl;
+            cout << "Nilai maksimum adalah " << maks << " berada di Array ke " << lokasi_maks << endl;
             break;
         case 2:
             // Output nilai minimum dan lokasinya
-            cout << "Nilai minimum adalah " << min << " berada di Array ke " << (lokasi_min + 1) << endl;
+            cout << "Nilai minimum adalah " << min << " berada di Array ke " << lokasi_min << endl;
             break;
         case 3:
             // Output nilai rata-rata
