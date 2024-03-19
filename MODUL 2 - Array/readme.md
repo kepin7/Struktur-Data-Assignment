@@ -215,7 +215,7 @@ int main()
 
 #### Output:
 
-![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/b96d4f94-00a9-4141-93c5-11cf123a1279)
+![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/2b0733a4-b5e4-40a2-aa88-aa57bb57d1ef)
 
 Program dimulai dengan menampilkan menu pilihan konversi suhu kepada pengguna. Setiap pilihan disertai dengan nomor yang berkaitan dan jenis konversi yang dilakukan, seperti dari Celsius ke Fahrenheit, Celsius ke Reamur, dan sebagainya. Setelah menampilkan menu, pengguna diminta untuk memilih opsi dengan memasukkan angka yang sesuai. Setelah memasukkan pilihan, program menggunakan pernyataan switch-case untuk menentukan tindakan yang akan diambil berdasarkan pilihan pengguna.
 
