@@ -51,19 +51,19 @@ untuk pengaksesan acak.
 Sembarang elemen di array
 dapat diacu secara
 langsung tanpa melalui
-elemen-elemen lain.
+elemen-elemen lain[4].
 - Jika berada di suatu
 lokasi elemen, maka sangat
 mudah menelusuri ke
 elemen-elemen tetangga,
 baik elemen pendahulu atau
-elemen penerus 3.
+elemen penerus 3[4].
 - Jika elemen-elemen
 array adalah nilai-nilai
-independen dan seluruhnya harus terjaga,maka
+independen dan seluruhnya harus terjaga, maka
 penggunaan
 penyimpanannya sangat
-efisien.
+efisien[4].
 
 #### Kelemahan:
 Array mempunyai fleksibilitas
@@ -74,25 +74,25 @@ berikut:
 - Array harus bertipe
 homogen. Kita tidak dapat
 mempunyai array dimana
-satu elemenadalah karakter,
+satu elemen adalah karakter,
 elemen lain bilangan, dan
 elemen lain adalah tipe-tipe
-lain.
+lain[4].
 - Kebanyakan bahasa
 pemrograman
 mengimplementasikan array
-statik yang sulitdiubah
+statik yang sulit diubah
 ukurannya di waktu
 eksekusi. Bila penambahan
 dan pengurangan
-terjaditerus-menerus, maka
-representasi statis.
+terjadi terus-menerus, maka
+representasi statis[4].
 - Tidak efisien dalam
-penggunaan memori.
+penggunaan memori[4].
 - Menyiakan banyak waktu
-komputasi.
+komputasi[4].
 
-## [Guided](#guided)
+## Guided
 
 ### 1. Program Input Array Tiga Dimensi
 
@@ -145,7 +145,9 @@ int main()
 }
 ```
 
-Kode diatas adalah program untuk melakukan operasi matematika dasar (penambahan, pengurangan, perkalian, dan pembagian) antara dua bilangan. Setelah pengguna memasukkan operator yang diinginkan (+, -, *, /), program kemudian meminta pengguna untuk memasukkan dua bilangan yang akan dioperasikan. Setelah menerima input, program menggunakan pernyataan switch-case untuk memeriksa operator yang dimasukkan oleh pengguna. Jika operator sesuai dengan salah satu kasus (+, -, *, /), maka program akan melakukan operasi yang sesuai sesuai dengan operator tersebut dan menampilkan hasilnya. Namun, jika operator yang dimasukkan tidak valid, program akan menampilkan pesan kesalahan.
+program mendeklarasikan array `arr` dengan dimensi `[2][3][3]`. Kemudian, program meminta pengguna untuk memasukkan nilai-nilai ke dalam array tersebut dengan menggunakan tiga nested loop. Pertama, loop pertama digunakan untuk mengakses elemen di dimensi pertama `x`, loop kedua untuk dimensi kedua `y`, dan loop ketiga untuk dimensi ketiga `z`. Setelah selesai memasukkan nilai, program kemudian menampilkan nilai-nilai yang telah dimasukkan.
+
+Selanjutnya, program akan menampilkan kembali nilai-nilai array dalam format yang terstruktur dengan mencetak indeks `x`, `y`, `z`, beserta nilainya. Terakhir, program akan menampilkan kembali nilai-nilai array dalam format yang lebih sederhana tanpa indeks `x`, `y`, `z`, hanya nilai-nilainya saja.
 
 ### 2. Program Mencari Nilai Maksimal pada Array
 
@@ -196,9 +198,11 @@ int main()
 
 ```
 
-Kode di atas adalah merupakan program yang menggunakan struktur data atau struct untuk merepresentasikan informasi mahasiswa. Dalam struct `Mahasiswa`, terdapat tiga anggota yaitu `name` (nama), `address` (alamat), dan `age` (umur). Program kemudian membuat dua variabel bertipe struct Mahasiswa, yaitu `mhs1` dan `mhs2`, dan mengisi nilai untuk masing-masing variabel.
+Program meminta untuk memasukkan panjang array yang diinginkan. Setelah panjang array dimasukkan, program mendeklarasikan array dengan panjang tersebut. Kemudian, program meminta user untuk memasukkan nilai-nilai elemen array satu per satu.
 
-Selanjutnya, program mencetak informasi mahasiswa ke layar menggunakan fungsi `printf`, termasuk nama, alamat, dan umur untuk kedua mahasiswa. Hasilnya adalah mencetak informasi mahasiswa 1 (`mhs1`) dan mahasiswa 2 (`mhs2`) ke layar sesuai dengan nilai yang telah diisikan sebelumnya.
+Setelah semua nilai dimasukkan, program melakukan iterasi melalui setiap elemen array untuk menemukan nilai maksimum. Variabel `maks` diinisialisasi dengan nilai elemen pertama array. Selanjutnya, program membandingkan setiap elemen array dengan nilai `maks`. Jika nilai elemen array saat ini lebih besar dari `maks`, maka nilai `maks` diperbarui dengan nilai elemen array tersebut, dan lokasi elemen tersebut disimpan dalam variabel `lokasi`.
+
+Setelah proses selesai, program mengeluarkan hasil berupa nilai maksimum yang ditemukan beserta lokasinya dalam array.
 
 ## Unguided
 
@@ -264,9 +268,17 @@ int main()
 
 ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/bba93a44-c7f7-45be-8e62-78f60ff109b6)
 
-Program dimulai dengan menampilkan menu pilihan konversi suhu kepada pengguna. Setiap pilihan disertai dengan nomor yang berkaitan dan jenis konversi yang dilakukan, seperti dari Celsius ke Fahrenheit, Celsius ke Reamur, dan sebagainya. Setelah menampilkan menu, pengguna diminta untuk memilih opsi dengan memasukkan angka yang sesuai. Setelah memasukkan pilihan, program menggunakan pernyataan switch-case untuk menentukan tindakan yang akan diambil berdasarkan pilihan pengguna.
+Program meminta user untuk memasukkan jumlah elemen array yang diinginkan. Nilai ini disimpan dalam variabel `a`. Kemudian, array `arr` dideklarasikan dengan ukuran yang sesuai dengan nilai `a`.
 
-Misalnya, jika pengguna memilih opsi 3 (Konversi dari Celsius ke Kelvin), program akan meminta pengguna untuk memasukkan suhu dalam Celsius. Setelah pengguna memasukkan suhu, program akan menggunakan fungsi `celsius_to_kelvin` untuk mengkonversi suhu tersebut ke dalam satuan Kelvin. Hasil konversi kemudian dicetak ke layar menggunakan pernyataan `cout`. Jika pengguna memasukkan suhu Celsius 26, program akan menghitung dan mencetak suhu tersebut dalam satuan Kelvin. Misalnya, jika hasil konversi adalah 299.15, maka hasilnya akan dicetak sebagai "Suhu dalam Kelvin: 299.15".
+Selanjutnya, user diminta untuk memasukkan `a` buah angka, satu per satu. Setiap angka yang dimasukkan akan disimpan dalam array `arr`. Setelah itu, program akan menampilkan kembali data array yang telah dimasukkan oleh user.
+
+Kemudian, program memulai iterasi melalui array `arr` untuk memisahkan angka genap dan ganjil. Dalam loop pertama, setiap elemen array diuji apakah merupakan angka genap atau tidak dengan menggunakan operasi modulo `%`. Jika sisa pembagian dengan 2 adalah 0, maka angka tersebut adalah angka genap dan akan ditampilkan. Begitu juga dalam loop kedua, hanya saja kondisinya untuk menampilkan angka ganjil.
+
+Setelah loop-loop tersebut selesai, program akan mengakhiri eksekusinya.
+
+Program tersebut memberikan pengguna kemampuan untuk memasukkan sejumlah angka, menyimpannya dalam array, dan menampilkan kembali angka-angka tersebut bersama dengan pemisahan antara angka genap dan ganjil.
+
+### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
 ```C++
 #include <iostream>
@@ -338,29 +350,14 @@ int main()
 
 ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/1910c84b-678e-4d20-976a-9391d73cb263)
 
-#### Struct Pegawai:
+Program ini meminta user untuk memasukkan jumlah baris, kolom, dan lapisan, dan kemudian membuat array tiga dimensi sesuai dengan input tersebut. Setelah itu, program meminta user untuk mengisi nilai-nilai array tersebut dan mencetak nilai-nilai tersebut lalu program mencetak array dalam format yang rapi.
 
-- `struct Pegawai` mendefinisikan struktur data untuk menampung informasi pegawai.
-  
-Struktur data ini memiliki tiga field :
-
-- nama: Bertipe `string` untuk menyimpan nama pegawai.
-- umur: Bertipe `int` untuk menyimpan usia pegawai.
-- email: Bertipe `string` untuk menyimpan alamat email pegawai.
-
-#### Class Pegawai1:
-
-- `class Pegawai1` dan `class Pegawai2` mendefinisikan class untuk menampung informasi pegawai.
-- `class Pegawai1` tidak mendeklarasikan akses publik, sehingga semua field dan methodnya bersifat private.
-- `class Pegawai2` mendeklarasikan akses public untuk semua fieldnya, sehingga dapat diakses langsung dari luar class.
-
-#### Fungsi main:
-
-- Dua variabel bertipe `Pegawai` dan `Pegawai2` dideklarasikan, yaitu `pgw1` dan `pgw2`.
-- Nilai field `nama`, `umur`, dan `email` untuk `pgw1` dan `pgw2` diisi.
-- Informasi `pegawai pgw1` dan `pgw2` ditampilkan.
-
-Program tersebut menunjukkan perbedaan dalam penggunaan class dan struct, terutama terkait dengan hak akses default anggota (private pada class, public pada struct). Objek `pgw1` menggunakan struct, sementara `pgw2` menggunakan class dengan hak akses public.
+Program mendeklarasikan variabel `x`, `y`, dan `z` untuk menyimpan jumlah baris, kolom, dan lapisan.
+User diminta untuk memasukkan jumlah baris, kolom, dan lapisan menggunakan `cin`.
+Array tiga dimensi `arr` dideklarasikan dengan ukuran yang sesuai dengan input user.
+Program menggunakan tiga perulangan bersarang untuk meminta user memasukkan nilai untuk setiap elemen array.
+Setelah semua nilai dimasukkan, program mencetak nilai-nilai array tersebut dengan menggunakan perulangan bersarang lagi.
+Kemudian, program mencetak nilai array dalam format yang lebih rapi dengan cara mencetak elemen-elemen array satu per satu dalam baris yang sama sebelum berpindah ke baris berikutnya. Program selesai dijalankan setelah mencetak array dalam format yang rapi.
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
@@ -454,11 +451,21 @@ int main()
 
 ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/f75af208-4731-476e-96fb-35164d4549ef)
 
-program tersebut untuk menghitung jumlah kemunculan setiap karakter dalam sebuah kalimat yang dimasukkan oleh pengguna. Setelah pengguna memasukkan sebuah kalimat, program akan melakukan iterasi melalui setiap karakter dalam kalimat tersebut dan mengabaikan spasi. Kemudian, menggunakan struktur data map dari C++, program menyimpan jumlah kemunculan setiap karakter dalam sebuah map, di mana karakter adalah kunci dan jumlah kemunculannya adalah nilai. Setelah selesai menghitung, program akan menampilkan hasil hitungan tersebut dengan mencetak setiap karakter beserta jumlah kemunculannya ke layar.
+Program dimulai dengan mendeklarasikan beberapa variabel, termasuk variabel untuk menyimpan panjang array `a`, iterasi `i`, nilai maksimum `maks` dan minimum `min`, lokasi nilai maksimum `lokasi_maks` dan minimum `lokasi_min`, total elemen array `total`, serta opsi menu `op`.
+
+User diminta untuk memasukkan panjang array melalui input dari keyboard. Sebuah array dengan panjang yang ditentukan oleh pengguna kemudian dideklarasikan `int array[a]` untuk menyimpan elemen-elemen array. User diminta untuk memasukkan nilai-nilai elemen array satu per satu melalui input dari keyboard. Selama pengguna memasukkan nilai, total elemen array juga dihitung. Nilai maksimum `maks` dan minimum `min` diinisialisasi dengan nilai dari elemen array pertama. Lokasi maksimum `lokasi_maks` dan minimum `lokasi_min` juga diinisialisasi dengan indeks 0. Dilakukan perulangan untuk memeriksa setiap elemen array. Jika nilai elemen array saat ini lebih besar dari nilai maksimum yang ditemukan sebelumnya, maka nilai maksimum dan lokasinya diperbarui. Begitu juga untuk nilai minimum. Setelah selesai mencari nilai maksimum dan minimum, nilai rata-rata dari semua elemen array dihitung. Program memasuki loop `do-while` untuk menampilkan menu kepada user dan meminta input opsi menu. menampilkan sebuah menu yang memungkinkan pengguna untuk memilih opsi, antara lain:
+
+1. menu no `1` Mencari Nilai Maksimum: Menampilkan nilai maksimum beserta lokasinya dalam array.
+2. menu no `2` Mencari Nilai Minimum: Menampilkan nilai minimum beserta lokasinya dalam array.
+3. menu no `3` Mencari Nilai Rata-rata: Menampilkan nilai rata-rata dari elemen-elemen array.
+4. menu no `4` Keluar: Mengakhiri program.
+
+Perulangan akan terus berlanjut sampai pengguna memilih opsi `4` untuk keluar (`op == 4`), di mana program akan menampilkan pesan terima kasih dan keluar dari program.
 
 ## Kesimpulan
 
-pemahaman tentang tipe data primitif, abstraksi kolektif, fungsi, struct, dan class adalah krusial. Tipe data primitif menyediakan dasar untuk menyimpan nilai tunggal, sementara abstraksi kolektif memungkinkan pengelompokkan data menjadi struktur yang lebih besar dan terorganisir. Fungsi, struct, dan class membantu dalam mengorganisir kode menjadi unit-unit yang dapat digunakan kembali dan memfasilitasi pemrograman berorientasi objek. Perbedaan antara array dan map juga penting untuk dipahami; array digunakan untuk koleksi elemen dengan tipe data yang sama, diakses melalui indeks numerik, sementara map menyimpan pasangan kunci-nilai yang memungkinkan akses cepat ke nilai berdasarkan kuncinya. Memahami konsep ini membantu pengembang dalam merancang dan mengimplementasikan solusi yang efisien, terstruktur, dan mudah dimengerti.
+Array merupakan struktur data yang digunakan untuk menyimpan kumpulan nilai yang serupa dengan tipe data yang sama dalam satu variabel. Dalam array, elemen-elemen disimpan secara berurutan dalam memori dan diakses melalui indeks. Penggunaan array memungkinkan pengelolaan data yang efisien dan memudahkan akses terhadap nilai-nilai tersebut. Namun, perlu diingat bahwa ukuran array biasanya tetap setelah dideklarasikan, sehingga perlu hati-hati dalam pengelolaan memori agar tidak terjadi overflow atau underflow. Array juga memungkinkan penggunaan banyak algoritma dan teknik pemrograman yang berguna, seperti pencarian dan pengurutan. Dengan pemahaman yang baik tentang array dalam C++, program dapat lebih efisien dan mudah untuk dikembangkan.
+
 ## Referensi
 
 [1] Mulyana, A., et al., Cara Mudah Mempelajari Algoritma dan Struktur Data. Edisi Pertama. Yogyakarta : DIVA Press, 2021
@@ -467,6 +474,6 @@ pemahaman tentang tipe data primitif, abstraksi kolektif, fungsi, struct, dan cl
 
 [3] Rus'an, J.A.P., “Program C++ : Array Multidimensi Menghitung Nilai Tertinggi, Perkalian Matriks, dan Rata-rata”, 30-Des-2022. [Online]. Available: https://medium.com/@jasmeinalbaar29/program-c-array-multidimensi-menghitung-nilai-tertinggi-perkalian-matriks-dan-rata-rata-3d175f2792da.
 
-[4] A. Suhendar, “Struktur data sederhana (statis array)”, 30-Mar-2019. [Online]. Available: osf.io/s2r57.
+[4] A. Suhendar, “Struktur data sederhana (statis array)”, 30-Mar-2019. [Online]. Available: https://osf.io/preprints/osf/s2r57.
 
-[5] "cppreference", [Online]. Available: https://en.cppreference.com/w/. [Accessed: March 7, 2024].
+[5] "geeksforgeeks", [Online]. Available: https://www.geeksforgeeks.org/. [Accessed: March 15, 2024].
