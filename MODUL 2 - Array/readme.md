@@ -23,6 +23,7 @@ memanipulasi elemen keempat tidak harus melalui elemen
 pertama, kedua, dan ketiga. Berdasarkan banyaknya indeks,
 larik dibagi menjadi larik satu dimensi dan multidimensi (dua
 dimensi dan tiga dimensi)[1].
+
 ### 1. Array Satu Dimensi:
 
 Array satu dimensi adalah kumpulan elemen yang bersebelahan di mana
@@ -40,6 +41,56 @@ elemennya diacu dengan menggunakan dua buah indeks
 (biasanya dikonotasikan dengan baris dan kolom)[1].
 
 ### 3. Array Multi Dimensi
+
+Array multidimensi adalah larik yang berisi satu atau lebih larik. Array Multidimensi merupakan array yang serupa dengan array satu dimensi maupun array dua dimensi, namun array multidimensi dapat memiliki memori yang lebih besar. Biasanya array multidimensi digunakan untuk menyebut array dengan dimensi lebih dari dua atau array yang mempunyai lebih dari dua subskrip, seperti untuk menyebut array tiga dimensi, empat dimensi, lima dimensi dan seterusnya[3].
+
+### Keunggulan dan Kelemahan Array:
+#### Keunggulan: 
+- Array sangat cocok
+untuk pengaksesan acak.
+Sembarang elemen di array
+dapat diacu secara
+langsung tanpa melalui
+elemen-elemen lain.
+- Jika berada di suatu
+lokasi elemen, maka sangat
+mudah menelusuri ke
+elemen-elemen tetangga,
+baik elemen pendahulu atau
+elemen penerus 3.
+- Jika elemen-elemen
+array adalah nilai-nilai
+independen dan seluruhnya harus terjaga,maka
+penggunaan
+penyimpanannya sangat
+efisien.
+
+#### Kelemahan:
+Array mempunyai fleksibilitas
+rendah, sehingga tidak cocok untuk
+berbagai aplikasi karena array
+mempunyai batasan sebagai
+berikut:
+- Array harus bertipe
+homogen. Kita tidak dapat
+mempunyai array dimana
+satu elemenadalah karakter,
+elemen lain bilangan, dan
+elemen lain adalah tipe-tipe
+lain.
+- Kebanyakan bahasa
+pemrograman
+mengimplementasikan array
+statik yang sulitdiubah
+ukurannya di waktu
+eksekusi. Bila penambahan
+dan pengurangan
+terjaditerus-menerus, maka
+representasi statis.
+- Tidak efisien dalam
+penggunaan memori.
+- Menyiakan banyak waktu
+komputasi.
 
 ## [Guided](#guided)
 
@@ -414,6 +465,8 @@ pemahaman tentang tipe data primitif, abstraksi kolektif, fungsi, struct, dan cl
 
 [2] Zein, A. dan Eriana, E.S., Algoritma dan Struktur Data. Edisi Pertama. Tangerang Selatan : Unpam Press, 2022.
 
-[3] A. Suhendar, “Struktur data sederhana (statis array)”, 30-Mar-2019. [Online]. Available: osf.io/s2r57.
+[3] Rus'an, J.A.P., “Program C++ : Array Multidimensi Menghitung Nilai Tertinggi, Perkalian Matriks, dan Rata-rata”, 30-Des-2022. [Online]. Available: https://medium.com/@jasmeinalbaar29/program-c-array-multidimensi-menghitung-nilai-tertinggi-perkalian-matriks-dan-rata-rata-3d175f2792da.
+
+[4] A. Suhendar, “Struktur data sederhana (statis array)”, 30-Mar-2019. [Online]. Available: osf.io/s2r57.
 
 [5] "cppreference", [Online]. Available: https://en.cppreference.com/w/. [Accessed: March 7, 2024].
