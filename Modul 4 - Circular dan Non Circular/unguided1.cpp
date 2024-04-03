@@ -5,6 +5,7 @@
 using namespace std;
 
 /// PROGRAM SINGLE LINKED LIST CIRCULAR
+
 // Deklarasi Struct Node
 struct Node
 {
@@ -424,9 +425,8 @@ int main()
             break;
         case 9:
             // Hapus Tengah
-            int posisiHapus;
             cout << "Masukkan Posisi: ";
-            cin >> posisiHapus;
+            cin >> posisi;
             hapusTengah(posisi);
             break;
         case 10:
