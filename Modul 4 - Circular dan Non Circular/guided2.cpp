@@ -3,7 +3,6 @@
 using namespace std;
 
 /// PROGRAM SINGLE LINKED LIST CIRCULAR
-
 // Deklarasi Struct Node
 struct Node
 {
