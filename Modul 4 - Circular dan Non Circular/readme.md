@@ -1226,6 +1226,44 @@ Program merupakan implementasi dari sebuah program untuk mengelola data mengguna
 
    b) Hapus data Denis
 
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/01b17b58-8e67-474d-ac8d-6942773bb3b5)
+
+   c) Tambahkan data berikut di awal:
+      Owi  2330000
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/f107f10e-a073-4a02-849a-d87cf58fc1d2)
+
+   d) Tambahkan data berikut di akhir:
+      David  23300100
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/ded96d8a-a5a2-41f8-b0aa-ee842d0c5273)
+
+   e) Ubah data Udin menjadi data berikut:
+      Idin  23300045
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/a4b4be00-345d-422c-989c-d7b1c47e8bd6)
+
+   f) Ubah data terkahir menjadi berikut:
+      Lucy  23300101
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/ba63beb4-c022-41bd-a5e4-31f1fe08a771)
+
+   g) Hapus data awal
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/196ea483-684f-4933-8a7b-36d35dff14c6)
+
+   h) Ubah data awal menjadi berikut:
+      Bagas  2330002
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/570553ea-ae82-4737-97a8-cc9c953e4cf6)
+
+   i) Hapus data akhir
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/1c5da250-5b4e-4654-bf91-3fbea668b968)
+
+   j) Tampilkan seluruh data
+
+   ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/4db08994-8a4f-4c66-ae58-bbeab8f7144c)
 
 ## Kesimpulan
 
