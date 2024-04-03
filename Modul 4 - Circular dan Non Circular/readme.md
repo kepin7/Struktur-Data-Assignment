@@ -1146,7 +1146,7 @@ int main()
             // Tampilkan List
             tampil();
             break;
-            // jika pilihan tidak
+            // jika pilihan tidak ada
         default:
             cout << "Pilihan invalid!" << endl;
             break;
