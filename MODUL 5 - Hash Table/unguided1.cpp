@@ -189,6 +189,7 @@ int main()
             cout << "Masukan nilai : ";
             cin >> nilai;
             ht.insert(nama, NIM, nilai);
+            cout<<"Data berhasil ditambahkan"<<endl;
             break;
         case 2:
             // hapus data mahasiswa berdasarkan NIM
