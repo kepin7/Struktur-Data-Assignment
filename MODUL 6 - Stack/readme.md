@@ -284,9 +284,11 @@ int main()
 }
 ```
 Output Jika Kalimat Palindrom :
+
 ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/c872d95e-9daa-4941-8896-2d6bcfbedd9c)
 
 Output Jika Kalimat Bukan Palindrom :
+
 ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/4e004d06-94a2-4003-9e39-009b258826b9)
 
 **Berikut Penjelasan Cara Kerja Program**
@@ -414,6 +416,7 @@ int main()
 ```
 
 Output Pembalikan Kalimat :
+
 ![image](https://github.com/kepin7/Struktur-Data-Assignment/assets/91455626/56212c25-e9ec-42b9-a06b-74459cfc7ea6)
 
 Output dari program ini adalah membalikkan setiap karakter dalam input kalimat yang diberikan oleh pengguna. Setelah membalikkan, program menampilkan kalimat terbalik tersebut. Jadi, jika inputnya adalah "wUjUd AslI cAhAyA", outputnya akan menjadi "AyAhAc IlslA dUjUw".
@@ -432,7 +435,7 @@ Fungsi utama `main()` meminta pengguna untuk memasukkan sebuah kalimat, kemudian
 
 ## Kesimpulan
 
-Dalam dunia pemrograman, struktur data stack adalah kumpulan elemen-elemen yang diatur berdasarkan prinsip Last In, First Out (LIFO), yang berarti elemen terakhir yang dimasukkan ke dalam stack akan menjadi elemen pertama yang dikeluarkan. Ini memungkinkan operasi-operasi seperti penambahan elemen (push) dan penghapusan elemen (pop) dilakukan dengan cepat dan efisien. Stack sering digunakan dalam penyelesaian masalah seperti pemanggilan fungsi dalam pemrograman dan manajemen memori dalam sistem komputer.
+Struktur data stack adalah kumpulan elemen-elemen yang diatur berdasarkan prinsip Last In, First Out (LIFO), yang berarti elemen terakhir yang dimasukkan ke dalam stack akan menjadi elemen pertama yang dikeluarkan. Ini memungkinkan operasi-operasi seperti penambahan elemen (push) dan penghapusan elemen (pop) dilakukan dengan cepat dan efisien. Stack sering digunakan dalam penyelesaian masalah seperti pemanggilan fungsi dalam pemrograman dan manajemen memori dalam sistem komputer.
 
 ## Referensi
 
@@ -440,4 +443,4 @@ Dalam dunia pemrograman, struktur data stack adalah kumpulan elemen-elemen yang 
 
 [2] Universitas Bakrie, “Kenalan dengan Pengertian Stack dalam Pemrograman,” bakrie.ac.id. [Online]. Tersedia : https://bakrie.ac.id/articles/552-kenalan-dengan-pengertian-stack-dalam-pemrograman.html [Diakses 5 Mei 2024].
 
-[3] Sitompul, D. U. A, et al, "Struktur Data Stack,". 2020, hlm. . URL: https://id.scribd.com/document/459268842/MAKALAH-STRUKTUR-DATA-STACK.
+[3] Sitompul, D. U. A, et al, "Struktur Data Stack,". 2020, hlm. 8. URL: https://id.scribd.com/document/459268842/MAKALAH-STRUKTUR-DATA-STACK.
