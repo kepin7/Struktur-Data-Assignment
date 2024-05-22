@@ -419,9 +419,8 @@ Setelah proses pencarian selesai, program menampilkan informasi tentang hasil pe
 
 ## Kesimpulan
 
-Berikut ini adalah kesimpulan dalam paragraf tentang materi searching pada C++:
-
 Pencarian (searching) merupakan struktur data dalam pengolahan data. Terdapat beberapa algoritma pencarian yang dapat digunakan, seperti sequential search dan binary search. Sequential search merupakan metode pencarian sederhana yang memeriksa setiap elemen dalam array secara berurutan hingga elemen yang dicari ditemukan atau seluruh elemen telah diperiksa. Sementara itu, binary search merupakan metode pencarian yang lebih efisien untuk array yang telah diurutkan. Algoritma ini membagi array menjadi dua bagian dan mencari elemen target pada salah satu bagian tersebut. Proses ini diulang terus menerus hingga elemen target ditemukan atau seluruh elemen telah diperiksa. Pemilihan algoritma pencarian yang tepat sangat penting untuk memastikan efisiensi dan kinerja program, terutama ketika berurusan dengan set data besar.
+
 ## Referensi
 
 [1] Putro, S.S. et al., Algoritma Pemrograman. Edisi Pertama. Malang : Media Nusa Creative (MNC Publishing), 2019.
